@@ -1,0 +1,23 @@
+/* Structure */
+body{
+    background: rgb(143, 113, 105);
+}
+
+/* Tables */
+table{
+    border-collapse: collapse;
+}
+
+th{
+    background: rgb(220, 130, 35);
+}
+
+td, th{
+    border:1px solid rgb(220, 101, 27);
+    padding: 5px;
+}
+
+/* Typography */
+h1,h2{
+    color: rgb(226, 117, 84);
+}
