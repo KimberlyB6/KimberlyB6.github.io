@@ -1,3 +1,52 @@
+/*Structure*/
+body{
+    background: url(assignments/assignment02/images/bio-vs-comp-sci.jpg);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header p{
+    font-style: italic;
+}
+
 h1{
-    color: green;
+    color: rgb(144, 67, 186);
+}
+
+h2{
+    color: rgb(76, 45, 133);
+}
+
+#content header, footer, main{
+    background: whitesmoke;
+    border: 5px solid black;
+    padding: 5px;
+    margin: 100px;
+}
+
+main li{
+    background-color: rgb(86, 41, 94);
+    color: black;
+    width: 25%;
+    padding: 4px;
+    border-radius: 10px;
+    margin: 10px auto 20px;
+}
+
+main li:hover{
+    background-color: rgb(144, 67, 186);
+}
+
+main a:hover{
+    text-decoration: none;
+    background-color: rgb(144, 67, 186);
+    color: white;
+}
+
+main a{
+    text-decoration: none;
+    color: rgb(194, 154, 214);
+}
+
+/*Typography*/
+header h1, header h2, main h2, footer, li{
+    text-align: center;
 }

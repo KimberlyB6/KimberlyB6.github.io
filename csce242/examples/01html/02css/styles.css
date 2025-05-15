@@ -1,0 +1,70 @@
+/* Structure */
+body{
+    background: url(images/background.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content{
+    background-color: rgb(134, 102, 63);
+    width: 80%;
+    margin: auto; /*Center*/
+    border: 4px solid black;
+    padding: 1px;
+    /*padding: 10px 20px; changes inside margins*/
+}
+
+header, footer{
+    background: white;
+    border: 5px solid black;
+    padding: 5px;
+    margin: 10px 0; /*10px top, bottom, 0px right,left*/
+}
+
+#main-content{
+    padding: 5px;
+    border: 3px solid black;
+    background-color: burlywood;
+}
+
+/*Picture Section*/
+.giraffe-pic{
+    background-color: rgb(106, 78, 53);
+    text-align: center;
+    width: 50%;
+    margin: 10px auto 20px;
+    padding: 20px 5px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+}
+
+/*Navigation*/
+nav ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#main-nav li{
+    display: inline-block;
+}
+
+#main-nav a{
+    text-decoration: none;
+    background-color: bisque;
+    color: black;
+    padding: 5px;
+    border-radius: 5px; /*Fixes corners*/
+}
+
+#main-nav a:hover{
+    background-color: brown;
+    color: white;
+}
+
+/*Typography*/
+header h1, header h2, footer p{
+    text-align: center;
+}
+
+.giraffe-pic h4{
+    text-align: center;
+}
