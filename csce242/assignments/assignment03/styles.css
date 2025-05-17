@@ -75,6 +75,7 @@ nav ul, li, a {
 
 /*Links*/
 .links {
+  width: 200px;
   background: #dc3545;
   padding: 16px;
   color: white;
@@ -92,16 +93,20 @@ nav ul, li, a {
 }
 
 /*Content*/
-.content-grid {
+.content{
   display: flex;
-  flex-wrap: wrap;
+  flex: 1;
   padding: 16px;
   background: #d9e6df;
   border-radius: 8px;
-  justify-content: space-between;
 }
 
 /*Tiles*/
+.layout {
+  display: flex;
+  margin: 16px;
+}
+
 .tile {
   flex: 1 1;
   background: #198754;
@@ -113,6 +118,10 @@ nav ul, li, a {
   margin-right: 16px;
 }
 
+.title-column {
+  flex: 1 1;
+}
+
 .tile img {
   border: 2px solid #fff;
   border-radius: 5px;
@@ -120,6 +129,30 @@ nav ul, li, a {
   margin: 8px 0;
 }
 
+.title-column, .gallery-column {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-right: 16px;
+  align-content: flex-start;
+
+}
+
+.gallery-column {
+  margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.gallery-column .tile{
+  width: 32%;
+  margin-bottom: 16px;
+}
+
+/*Footer*/
 footer {
   background: #dc3545;
   text-align: center;
@@ -146,9 +179,28 @@ footer {
     margin: 0 0 16px 0;
   }
 
-  .content-grid {
+  .content {
     flex-direction: column;
   }
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .links {
+    width: 90%;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .title-column, .gallery-column {
+    margin-right: 0;
+  }
+
+  .title-column {
+    justify-content: center;
+  }
+
   .tile {
     flex: 1 1 100%;
     margin-right: 0;
