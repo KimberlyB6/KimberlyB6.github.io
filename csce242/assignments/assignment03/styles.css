@@ -1,0 +1,156 @@
+/*Structure*/
+body {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #212529;
+}
+
+header {
+  background: #f8f9fa;
+  padding: 16px;
+  border-bottom: 5px solid #dc3545;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #198754;
+}
+
+/*Navigation*/
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  padding: 8px;
+  background: #dc3545;
+  border-radius: 10px;
+}
+
+nav ul, li, a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*Ideas*/
+.idea-section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.idea {
+  display: flex;
+  background: #d9e6df;
+  padding: 16px;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.idea.reverse {
+  background: #5b9e9f;
+}
+
+.idea img {
+  border: 4px solid #999;
+  border-radius: 10px;
+  margin-right: 16px;
+}
+
+.idea.reverse img {
+    margin-right: 0;
+    margin-left: 16px;
+}
+
+.idea h2 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.idea p {
+  font-weight: 400;
+}
+
+/*Links*/
+.links {
+  background: #dc3545;
+  padding: 16px;
+  color: white;
+  border-radius: 8px;
+  margin: 16px;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/*Content*/
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+  background: #d9e6df;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+/*Tiles*/
+.tile {
+  flex: 1 1;
+  background: #198754;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  min-width: 200px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+
+.tile img {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  display: block;
+  margin: 8px 0;
+}
+
+footer {
+  background: #dc3545;
+  text-align: center;
+  padding: 16px;
+  color: white;
+  margin-top: 16px;
+  border-radius: 0 0 8px 8px;
+}
+
+/*Small*/
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .idea {
+    flex-direction: column;
+  }
+  .idea.reverse {
+    flex-direction: column;
+  }
+
+  .idea img, .idea.reverse img {
+    margin: 0 0 16px 0;
+  }
+
+  .content-grid {
+    flex-direction: column;
+  }
+  .tile {
+    flex: 1 1 100%;
+    margin-right: 0;
+  }
+}
