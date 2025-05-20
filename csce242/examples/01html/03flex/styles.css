@@ -47,13 +47,31 @@ img {
     max-width: 100%;
 }
 
+#sub-header {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+header {
+    /*Doesnt change the look cause we didnt use top, left,...*/
+    position: relative;
+    min-height: 150px;
+}
+
+#logo {
+    border: 2px solid black;
+    position: absolute;
+    left: 50px;
+}
+
 /* Navigation */
 
 
 
 
 /* Typography */
-h1, h2{
+h1, h2, footer{
     text-align: center;
 }
 

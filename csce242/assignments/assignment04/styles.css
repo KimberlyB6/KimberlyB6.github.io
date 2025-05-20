@@ -1,0 +1,281 @@
+/*Structure*/
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 100px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/*Top nav bar*/
+.top-bar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #73000A;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    flex-wrap: wrap;
+}
+
+.logo, .logo-right {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.top-nav {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav li {
+    margin: 0 12px;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/*Main nav bar*/
+.main-nav {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: black;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.main-nav li {
+    margin: 0 20px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/*Swim*/
+.swim {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.swim img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.swim-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.swim-text p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.swim-text h1 {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* Thumbnails Section */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.thumbnails img {
+  margin: 10px;
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+}
+
+/* Have a Question Box */
+.question-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #990000;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  z-index: 1001;
+}
+
+/* Schedule Section */
+.schedule {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+
+.schedule h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.event .date {
+  background-color: #990000;
+  color: white;
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.event .details p {
+  margin-bottom: 5px;
+}
+
+/* Videos Section */
+.videos {
+  padding: 40px 20px;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.videos h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.video-featured {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.video-featured img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.video-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video-gallery img {
+  width: 200px;
+  height: 150px;
+}
+
+/* More Headlines */
+.more-headlines {
+  padding: 40px 20px;
+}
+
+.more-headlines h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.headline-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.headline-grid div {
+  margin: 10px;
+  text-align: center;
+}
+
+.headline-grid img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: white;
+  margin-top: 20px;
+}
+
+/*Media*/
+@media (max-width: 768px) {
+  .top-bar,
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-nav li,
+  .main-nav li {
+    margin: 10px 0;
+  }
+
+  .thumbnails, .video-gallery, .headline-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thumbnails img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .question-box {
+    position: static;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
