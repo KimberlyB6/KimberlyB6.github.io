@@ -8,7 +8,7 @@ body, html {
 body {
   padding-top: 100px;
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: white;
   color: #333333;
 }
 
@@ -138,7 +138,7 @@ body {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background-color: #990000;
+  background-color: #73000A;
   color: white;
   padding: 10px 15px;
   font-weight: bold;
@@ -148,35 +148,65 @@ body {
 }
 
 /* Schedule Section */
-.schedule {
-  padding: 40px 20px;
-  background-color: #f4f4f4;
-}
-
-.schedule h2 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.event {
+.schedule .event {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
 }
 
-.event .date {
-  background-color: #990000;
+.schedule .date {
+  background-color: #73000A;
   color: white;
-  padding: 10px;
-  width: 80px;
   text-align: center;
+  padding: 10px;  
   font-weight: bold;
-  margin-right: 20px;
+  width: 80px; 
 }
 
-.event .details p {
-  margin-bottom: 5px;
+.schedule .matchup {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; 
 }
+.schedule .team-logo {
+  height: 40px;   
+  width: auto;
+}
+.schedule .vs {
+  margin: 0 8px;      
+  font-weight: bold;
+}
+.schedule .opponent {
+  margin-left: 8px; 
+  font-size: 16px;   
+}
+
+.schedule .location {
+  display: flex;
+  flex-direction: column; 
+  margin-left: 20px;
+}
+.schedule .location .home-away {
+  margin-top: 4px;     
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.schedule .results {
+  margin-left: auto;        
+  text-align: right;
+  font-size: 14px; 
+}
+.schedule .results .links a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #73000A;
+  font-weight: bold;
+}
+.schedule .results .score {
+  margin-top: 4px;  
+}
+
 
 /* Videos Section */
 .videos {
@@ -236,10 +266,38 @@ body {
   text-align: center;
 }
 
+.headline-grid p, h4{
+  max-width: 200px;
+  margin: auto 20px;
+}
+
 .headline-grid img {
   width: 200px;
   height: 150px;
   object-fit: cover;
+}
+
+/*Buttons*/
+.btn-primary {
+  display: inline-block;
+  background-color: #dfd3d4;
+  color: #73000A;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.schedule-footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.load-more {
+  text-align: center;
+  margin-top: 30px;
 }
 
 /* Footer */
@@ -269,19 +327,20 @@ footer {
     top: 65px;
   }
 
-  .thumbnails {
+  .thumbnails, .headline-grid {
     flex-direction: row;
     align-items: center;
   }
 
-  .video-gallery, .headline-grid {
+  .video-gallery {
     flex-direction: row;
   }
 
-  .thumbnails img {
+  .thumbnails img, .headline-grid img {
     width: 90%;
     max-width: 300px;
   }
+  
 
   .question-box {
     position: fixed;
