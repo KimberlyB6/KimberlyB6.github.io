@@ -9,31 +9,56 @@
             <header>
                 <h1>Let's Learn JavaScript</h1>
                 <nav id="main-nav">
-                    <ul>
+                    <div id="toggle-nav">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul class="hide-small">
                         <li><a href="index.html">Intro</a></li>
                         <li><a href="#">Conditions</a></li>
                     </ul>
                 </nav>
             </header>
             <div class="main-area columns">
-                <section class="one">
+                <section>
                     <h3>Write to a Paragraph</h3>
                     <button id="btn-write">Write</button>
                     <p id="writep"></p>
                 </section>
-                <section class = one>
+                <section>
                     <h3>Starting and Stopping</h3>
                     <button id="btn-start">Start</button>
                     <button id="btn-end">End</button>
-                    <p id="writeSE"></p>
+                    <p id="startstopp"></p>
                 </section>
-                <section class="one">
+                <section>
                     <h3>Say Hello</h3>
                     <p>
                         <label for="txt-name">Enter Name: </label>
-                        <input id="txt-name" type="text">
+                        <input type="text" id="txt-name">
                         <p id="welcomep"></p>
                     </p>
+                </section>
+                <section>
+                    <h3>Happy and Sad</h3>
+                    <p>
+                        <button id="btn-happy">Happy</button>
+                        <button id="btn-sad">Sad</button>
+                        <p id="moodp"></p>
+                    </p>
+                    <p>
+                        <img id="image-mood" class="hidden" src="">
+                    </p>
+                </section>
+                <section>
+                    <h3>Color</h3>
+                    <div>
+                        <label for="txt-color">Enter Color: </label>
+                        <input type="text" id="txt-color">
+                        <button id="btn-color">Show</button>
+                        <p id="colorp"></p>
+                    </div>
                 </section>
             </div>
             <footer id="footer-main">
@@ -41,5 +66,6 @@
             </footer>
         </div>
         <script src="js/intro.js"></script>
+        <script src="nav.js"></script>
     </body>
 </html>

@@ -1,14 +1,28 @@
 /* Structure */
+:root {
+    --main-background:#84B1D9;
+    --secondary-color:navy;
+    --front-color:white;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color:#84B1D9;
+    background-color:var(--main-background);
 }
 
 header, .main-area, footer {
     padding:5px;
     margin:10px 0px;
-    background:white;
+    background:var(--front-color);
     border-radius: 5px;
+}
+
+.main-area section {
+    background:var(--secondary-color);
+    color:var(--front-color);
+    margin:10px;
+    border-radius: 5px;
+    padding:5px;
 }
 
 /* Images */
@@ -30,9 +44,22 @@ img {
     display:block;
     text-decoration: none;
     padding:5px;
-    background-color:navy;
+    background-color:var(--secondary-color);
     color:white;
-    border-bottom:1px solid white;
+    border-bottom:1px solid var(--front-color);
+}
+
+
+
+#toggle nav div {
+    width: 25px;
+    height: 25px;
+    background-color: var(--secondary-color);
+    margin: 6px 0;
+}
+
+.image-bold {
+    border: 10px solid red;
 }
 
 /* Typography */
@@ -40,11 +67,22 @@ h1, h2 {
     text-align: center;
 }
 
+/*Hide and show*/
+.hidden {
+    display:none;
+}
 
+.hide-small {
+    display:none;
+}
 
 /* Media Queries */
 /* Portrait Tablet */
 @media screen and (min-width: 600px) {
+    .hide-small {
+        display:flex;
+    }
+
     #main-nav ul {
         width:fit-content;
         margin:auto;
@@ -59,7 +97,16 @@ h1, h2 {
     }
 
     #main-nav a:hover {
-        border-bottom:1px solid navy;
+        border-bottom:1px solid var(--secondary-color);
+    }
+
+    .main-area {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .main-area section {
+        width:30%;
     }
 }
 
@@ -68,6 +115,10 @@ h1, h2 {
     header, footer, .main-area {
         width:85%;
         margin:10px auto;
+    }
+
+    #toggle-nav {
+    display:none;
     }
 
     /* Columns */
