@@ -10,7 +10,6 @@ document.getElementById("numberSlider").oninput = (event) => {
 };
 
 /*Image*/
-document.getElementById("showImageBtn").onclick = (event) => {
-    document.getElementById("iceCreamImage").style.display = 'block';
-    event.target.style.display = 'none';
+document.getElementById("showImageBtn").onclick = () => {
+    document.getElementById("iceCreamImage").style.display = 'center';
 };
