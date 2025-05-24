@@ -217,16 +217,26 @@ nav a {
     text-align: center;
   }
   .recipe-list .card,
-  .gallery-grid .card,
   .music-cards .card,
   .shop-grid .card {
     width: 48%;
     margin-right: 2%;
   }
   .recipe-list .card,
-  .gallery-grid .card,
   .music-cards .card,
   .shop-grid .card {
     margin-right: 0;
+  }
+
+  .gallery-grid .card {
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  .gallery-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
   }
 }
