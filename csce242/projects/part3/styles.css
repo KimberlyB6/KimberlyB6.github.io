@@ -155,6 +155,18 @@ nav a {
     margin-right: 1%;
 }
 
+/*Recipe Content*/
+.recipe-content {
+  max-height: 250px; 
+  overflow-y: auto;      
+  padding: 10px;
+  background-color: var(--muted);
+  color: var(--text);
+  border-top: 1px solid var(--accent);
+  border-radius: 0 0 16px 16px;
+  box-sizing: border-box;
+}
+
 /*music*/
 .music-cards {
   display: flex;
