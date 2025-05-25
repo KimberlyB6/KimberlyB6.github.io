@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript: Conditionals</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h1>Assignment 6</h1>
+    <p class="subtitle">If Statements</p>
+    <div class="mobile-menu">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div id="arrow">▼</div>
+        </div>
+        <ul class="menu-items" id="menuItems">
+            <li onclick="showSection('speed')">Exercise 1</li>
+            <li onclick="showSection('art')">Exercise 2</li>
+        </ul>
+    </div>
+    <div class="horizontal-nav">
+        <li onclick="showSection('speed')">Exercise 1</li>
+        <li onclick="showSection('art')">Exercise 2</li>
+    </div>
+    <div id="speed" class="section">
+        <div class="bike-container">
+            <h2>Let's Speed</h2>
+            <input type="range" id="speedRange" min="1" max="10" />
+            <div class="speed-controls">
+                <button onclick="startBike()">Go</button>
+                <button onclick="stopBike()">Stop</button>
+            </div>
+            <img src="images/Biking.jpg" id="bike" />
+        </div>
+    </div>
+    <div id="art" class="section" style="display: none;">
+        <h2>CSS Art</h2>
+        <button onclick="showArt('moon')">Moon</button>
+        <button onclick="showArt('star')">Star</button>
+        <button onclick="showArt('cloud')">Cloud</button>
+        <div id="artBox" class="art-box"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
