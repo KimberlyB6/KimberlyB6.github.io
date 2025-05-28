@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <h1>Let's Learn JavaScript</h1>
+            <nav id="main-nav">
+                <div id="toggle-nav">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="hide-small">
+                    <li><a href="index.html">Intro</a></li>
+                    <li><a href="loops.html">Loops</a></li>
+                    <li><a href="arrays.html">Arrays</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="slideshow">
+            <section id="slides">
+                <img src="images/slideshow/boat.jpg">
+                <img src="images/slideshow/hill.jpg" class="hidden">
+                <img src="images/slideshow/nature-path.jpg" class="hidden">
+                <img src="images/slideshow/water-mountains.jpg" class="hidden">
+                <img src="images/slideshow/waterfall.jpg" class="hidden">
+            </section>
+            <a href="#" class="arrow" id="left-arrow">&lt;</a>
+            <a href="#" class="arrow" id="right-arrow">&gt;</a>
+        </section>
+        <div class="main-area columns">
+            <section>
+                <h3>Basic Loop</h3>
+                <button id="btn-basic-loop">Loop</button>
+                <div id="basic-loops-list"></div>
+            </section>
+            <section>
+                <h3>Loops with Input</h3>
+                <p>
+                    <label for="txt-start-loop">Start: </label>
+                    <input type="number" id="txt-start-loop">
+                </p>
+                <p>
+                    <label for="txt-end-loop">End: </label>
+                    <input type="number" id="txt-end-loop">
+                </p>
+                <p><button id="btn-loop-input">Loop</button></p>
+                <ul id="loop-list">
+
+                </ul>
+            </section>
+            <section>
+                <h3>Counting</h3>
+                <button id="btn-start-count">Start</button>
+                <button id="btn-pause-count">Pause</button>
+                <button id="btn-reset-count">Reset</button>
+
+                <p id="dispaly-count"></p>
+            </section>
+            <section>
+                <h3>Fruits</h3>
+                <ul id="fruit-list">
+                    <li>Mangos</li>
+                    <li>Pineapple</li>
+                    <li>Apples</li>
+                    <li>Cherries</li>
+                    <li>Grapes</li>
+                </ul>
+                <p><button id="btn-eat">Eat</button></p>
+                <p><button id="btn-highlight">Highlight</button></p>
+            </section>
+            <section>
+                <h3>Button Messages</h3>
+                <div id="weather-buttons">
+                    <button>Cloud</button>
+                    <button>Sun</button>
+                    <button>Moon</button>
+                    <button>Star</button>
+                </div>
+                <p id="weather-message"></p>
+            </section>
+        </div>
+        <footer id="footer-main">
+            &copy; Kim
+        </footer>
+    </div>
+    <script src="js/nav.js"></script>
+    <script src="js/loops.js"></script>
+    <script src="js/arrows.js"></script>
+</body>
+
+</html>

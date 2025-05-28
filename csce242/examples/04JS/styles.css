@@ -10,7 +10,7 @@ body {
     background-color:var(--main-background);
 }
 
-header, .main-area, footer {
+header, .main-area, footer , #slideshow{
     padding:5px;
     margin:10px 0px;
     background:var(--front-color);
@@ -49,17 +49,74 @@ img {
     border-bottom:1px solid var(--front-color);
 }
 
-
-
-#toggle nav div {
-    width: 25px;
-    height: 25px;
-    background-color: var(--secondary-color);
-    margin: 6px 0;
+#toggle-nav div {
+    width:25px;
+    height:2px;
+    background:var(--secondary-color);
+    margin:6px 0;
 }
 
 .image-bold {
-    border: 10px solid red;
+    border:3px solid pink;
+}
+
+#circle {
+    width:50px;
+    height:50px;
+    border-radius: 25px;
+    background:var(--front-color);
+}
+
+.bounce {
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+
+.highlight {
+    background:purple;
+    color:white;
+}
+
+@keyframes bounce {
+    0% {
+        top:0px;
+        background:navy;
+    }
+    50% {
+        top:-200px;
+        background:green;
+    }
+    100% {
+        top:0px;
+        background:red;
+    }
+}
+
+/* Slideshow */
+#slideshow {
+    position:relative;
+}
+
+.arrow {
+    position: absolute;
+    display: block;
+    top: 30%;
+    color: gray;
+    text-decoration: none;
+    font-size: 5em;
+    background: rgba(225, 225, 255, 0.5);
+    padding: 0 10px;
+}
+
+#left-arrow {
+    left: 10px;
+}
+
+#right-arrow {
+    right: 10px;
 }
 
 /* Typography */
@@ -67,7 +124,7 @@ h1, h2 {
     text-align: center;
 }
 
-/*Hide and show*/
+/* Hide and Show */
 .hidden {
     display:none;
 }
@@ -76,11 +133,16 @@ h1, h2 {
     display:none;
 }
 
+
 /* Media Queries */
 /* Portrait Tablet */
 @media screen and (min-width: 600px) {
     .hide-small {
         display:flex;
+    }
+
+    #toggle-nav {
+        display:none;
     }
 
     #main-nav ul {
@@ -112,13 +174,9 @@ h1, h2 {
 
 /* Landscape Tablet */
 @media screen and (min-width: 768px) {
-    header, footer, .main-area {
+    header, footer, .main-area, #slideshow {
         width:85%;
         margin:10px auto;
-    }
-
-    #toggle-nav {
-    display:none;
     }
 
     /* Columns */
@@ -159,7 +217,7 @@ h1, h2 {
 
 /* Labtop / Desktop */
 @media screen and (min-width: 992px) {
-    header, footer, .main-area {
+    header, footer, .main-area, #slideshow {
         width:70%;
     }
 }

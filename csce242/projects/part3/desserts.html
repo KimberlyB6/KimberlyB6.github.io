@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Squish & Sweets Central - Dessert Recipes</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header class="header-bar">
-            <div class="container nav-bar">
-                <div class="logo">Squish & Sweets Central</div>
-                <nav>
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="desserts.html" class="active">Desserts</a></li>
-                        <li><a href="SquishmallowGallery.html">Squishmallow Gallery</a></li>
-                        <li><a href="musicLounge.html">Music Lounge</a></li>
-                        <li><a href="shopTools.html">Shop Tools</a></li>
-                    </ul>
-                </nav>
-                <div class="user-menu">
-                    <div>Kimberly Brown</div>
-                    <img src="images/user.jpg" alt="User" width="24" height="24">
-                </div>
+
+<head>
+    <title>Squish & Sweets Central - Dessert Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header-bar">
+        <div class="container nav-bar">
+            <div class="logo">Squish & Sweets Central</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="desserts.html" class="active">Desserts</a></li>
+                    <li><a href="SquishmallowGallery.html">Squishmallow Gallery</a></li>
+                    <li><a href="musicLounge.html">Music Lounge</a></li>
+                    <li><a href="shopTools.html">Shop Tools</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div>Kimberly Brown</div>
+                <img src="images/user.jpg" alt="User" width="24" height="24">
             </div>
-        </header>
-        <main class="container">
-            <section class="recipe-list">
-                <div class="card">
+        </div>
+    </header>
+    <main class="container">
+        <section id="cakes" class="recipe-section">
+            <h2>Cakes</h2>
+            <div class="recipe-list">
+                <div class="card" id="birthday-cake">
                     <div class="card-img placeholder-thumb"></div>
                     <div class="card-footer">Birthday Cake</div>
                     <div class="recipe-content">
@@ -50,7 +54,7 @@
                         </ol>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="strawberry-shortcake">
                     <div class="card-img placeholder-thumb"></div>
                     <div class="card-footer">Strawberry Shortcake</div>
                     <div class="recipe-content">
@@ -75,32 +79,7 @@
                         </ol>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-img placeholder-thumb"></div>
-                    <div class="card-footer">Apple Pie</div>
-                    <div class="recipe-content">
-                        <strong>Ingredients:</strong>
-                        <ul>
-                            <li>2 ¼ cups all-purpose flour</li>
-                            <li>1 ½ cups granulated sugar</li>
-                            <li>3 large eggs</li>
-                            <li>1 ¼ cups milk</li>
-                            <li>2 ½ tsp baking powder</li>
-                            <li>½ tsp salt</li>
-                            <li>2 tsp vanilla extract</li>
-                        </ul>
-                        <strong>Directions:</strong>
-                        <ol>
-                            <li>Preheat oven to 350 °F. Grease and flour two 8″ cake pans.</li>
-                            <li>Whisk flour, baking powder, and salt.</li>
-                            <li>Mix sugar & eggs until fluffy; add vanilla.</li>
-                            <li>Alternate adding dry mix and milk, beginning and ending with dry.</li>
-                            <li>Divide batter and bake 25–30 min, until toothpick is clean.</li>
-                            <li>Cool 10 min in pans, then transfer to wire racks.</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="card">
+                <div class="card" id="cheesecake">
                     <div class="card-img placeholder-thumb"></div>
                     <div class="card-footer">Cheesecake</div>
                     <div class="recipe-content">
@@ -125,17 +104,80 @@
                         </ol>
                     </div>
                 </div>
-            </section>
-            <div class="carousel-nav">
-                <a href="index.html"></a>
-                    <a href="#prev"></a>
-                    <div>2/5</div>
-                    <a href="gallery.html"></a>
-                    <a href="#reset"></a>
+                <div class="card" id="lemon-pound-cake">
+                    <div class="card-img placeholder-thumb"></div>
+                    <div class="card-footer">Lemon Pound Cake</div>
+                    <div class="recipe-content">
+                        <strong>Ingredients:</strong>
+                        <ul>
+                            <li>2 ¼ cups all-purpose flour</li>
+                            <li>1 ½ cups granulated sugar</li>
+                            <li>3 large eggs</li>
+                            <li>1 ¼ cups milk</li>
+                            <li>2 ½ tsp baking powder</li>
+                            <li>½ tsp salt</li>
+                            <li>2 tsp vanilla extract</li>
+                        </ul>
+                        <strong>Directions:</strong>
+                        <ol>
+                            <li>Preheat oven to 350 °F. Grease and flour two 8″ cake pans.</li>
+                            <li>Whisk flour, baking powder, and salt.</li>
+                            <li>Mix sugar & eggs until fluffy; add vanilla.</li>
+                            <li>Alternate adding dry mix and milk, beginning and ending with dry.</li>
+                            <li>Divide batter and bake 25–30 min, until toothpick is clean.</li>
+                            <li>Cool 10 min in pans, then transfer to wire racks.</li>
+                        </ol>
+                    </div>
+                </div>
             </div>
-        </main>
-        <footer>
-            <p>&copy; Kim</p>
-        </footer>
-    </body>
+        </section>
+        <section id="pies" class="recipe-section">
+            <h2>Pies</h2>
+            <div class="recipe-list">
+                <div class="card" id="apple-pie">
+                    <div class="card-img placeholder-thumb"></div>
+                    <div class="card-footer">Apple Pie</div>
+                    <div class="recipe-content">
+                        <strong>Ingredients:</strong>
+                        <ul>
+                            <li>2 ¼ cups all-purpose flour</li>
+                            <li>1 ½ cups granulated sugar</li>
+                            <li>3 large eggs</li>
+                            <li>1 ¼ cups milk</li>
+                            <li>2 ½ tsp baking powder</li>
+                            <li>½ tsp salt</li>
+                            <li>2 tsp vanilla extract</li>
+                        </ul>
+                        <strong>Directions:</strong>
+                        <ol>
+                            <li>Preheat oven to 350 °F. Grease and flour two 8″ cake pans.</li>
+                            <li>Whisk flour, baking powder, and salt.</li>
+                            <li>Mix sugar & eggs until fluffy; add vanilla.</li>
+                            <li>Alternate adding dry mix and milk, beginning and ending with dry.</li>
+                            <li>Divide batter and bake 25–30 min, until toothpick is clean.</li>
+                            <li>Cool 10 min in pans, then transfer to wire racks.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cookies" class="recipe-section">
+            <h2>Cookies</h2>
+            <div class="recipe-list">
+                <!-- Add cookie recipes here -->
+            </div>
+        </section>
+        <div class="carousel-nav">
+            <a href="index.html"></a>
+            <a href="#prev"></a>
+            <div>2/5</div>
+            <a href="gallery.html"></a>
+            <a href="#reset"></a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Kim</p>
+    </footer>
+</body>
+
 </html>

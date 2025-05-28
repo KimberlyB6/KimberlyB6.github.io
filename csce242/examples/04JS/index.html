@@ -16,10 +16,18 @@
                     </div>
                     <ul class="hide-small">
                         <li><a href="index.html">Intro</a></li>
-                        <li><a href="#">Conditions</a></li>
+                        <li><a href="loops.html">Loops</a></li>
+                        <li><a href="arrays.html">Arrays</a></li>
                     </ul>
                 </nav>
             </header>
+                <section id="slideshow">
+                    <img src="images/slideshow/boat.jpg">
+                    <img src="images/slideshow/hill.jpg" class="hidden">
+                    <img src="images/slideshow/nature-path.jpg" class="hidden">
+                    <img src="images/slideshow/water-mountains.jpg" class="hidden">
+                    <img src="images/slideshow/waterfall.jpg" class="hidden">
+                </section>
             <div class="main-area columns">
                 <section>
                     <h3>Write to a Paragraph</h3>
@@ -45,20 +53,24 @@
                     <p>
                         <button id="btn-happy">Happy</button>
                         <button id="btn-sad">Sad</button>
-                        <p id="moodp"></p>
+                        <button id="btn-style">Style</button>
                     </p>
                     <p>
                         <img id="image-mood" class="hidden" src="">
                     </p>
                 </section>
                 <section>
-                    <h3>Color</h3>
-                    <div>
-                        <label for="txt-color">Enter Color: </label>
-                        <input type="text" id="txt-color">
-                        <button id="btn-color">Show</button>
-                        <p id="colorp"></p>
-                    </div>
+                    <h3>Color Feelings</h3>
+                    <p><label for="txt-color">Enter Color</label></p>
+                    <p><input type="text" id="txt-color"></p>
+                    <p><button id="btn-color-mood">Show</button></p>
+                    <p id="color-mood"></p>
+                </section>
+                <section>
+                    <h3>Animate Circle</h3>
+                    <button id="btn-start-anim">Start</button>
+
+                    <div id="circle"></div>
                 </section>
             </div>
             <footer id="footer-main">
@@ -66,6 +78,8 @@
             </footer>
         </div>
         <script src="js/intro.js"></script>
-        <script src="nav.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/ifs.js"></script>
+        <script src="js/slideshow.js"></script>
     </body>
 </html>
