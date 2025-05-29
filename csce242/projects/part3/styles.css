@@ -5,11 +5,25 @@
     --accent: #AEEBF2;
 }
 
+/* Home Page */
+.home-link {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.home-list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
 /* Body */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--bg);
     color: var(--text);
+    margin: 0;
 }
 
 /* Container */
@@ -25,6 +39,7 @@ footer {
     background-color: var(--muted);
     padding: 10px;
 }
+
 footer {
     text-align: center;
 }
@@ -128,10 +143,17 @@ nav a {
     margin: 0 1% 10px 0;
 }
 
+.home-link .card {
+    float: left;
+    width: 24%;
+    margin: 0 1% 10px 0;
+}
+
 /* Make card fill its wrapper */
 .card-link .card {
     width: 75%;
 }
+
 
 /* Recipe List */
 .recipe-list {
