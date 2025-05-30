@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ramen Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Assignment 9: Ramen Classes</h1>
+    <div class="ramen-container" id="ramenGallery"></div>
+    <div id="ramenModal" class="modal">
+        <div class="content modal-inner">
+            <header class="container">
+                <span id="closeModal" class="close-btn">&times;</span>
+                <h2 id="modalTitle"></h2>
+            </header>
+            <div class="container">
+                <img id="modalImage" class="modal-img" alt="Ramen" />
+                <div class="modal-details">
+                    <p><strong>Broth:</strong> <span id="modalBroth"></span></p>
+                    <p><strong>Noodles:</strong> <span id="modalNoodles"></span></p>
+                    <p><strong>Toppings:</strong> <span id="modalToppings"></span></p>
+                    <p><strong>Spice Level:</strong> <span id="modalSpice"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
