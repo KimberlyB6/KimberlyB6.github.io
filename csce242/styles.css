@@ -1,87 +1,199 @@
-/*Structure*/
-body{
-    background: url(assignments/assignment02/images/bio-vs-comp-sci.jpg);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-header p{
-    font-style: italic;
+:root {
+  --bg: #F2B6C6;
+  --text: #BF2A70;
+  --muted: #D8F0F2;
+  --accent: #AEEBF2;
 }
 
-h1{
-    color: rgb(144, 67, 186);
+/* Body */
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
 }
 
-h2{
-    color: rgb(76, 45, 133);
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-#content header, footer, main{
-    background: whitesmoke;
-    border: 5px solid black;
-    padding: 5px;
-    margin: 100px auto;
-    max-width: 1200px;
+/* Header & Footer */
+.header-bar,
+footer {
+  background-color: var(--muted);
+  padding: 10px;
+}
+footer {
+  text-align: center;
 }
 
-/*Main Layout*/
-main ol {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 1200px;
+/* Nav Bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-bar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-bar nav li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.nav-bar nav a {
+  color: var(--text);
+  text-decoration: none;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-main li{
-    background-color: rgb(86, 41, 94);
-    color: black;
-    width: 25%;
-    padding: 10px;
-    border-radius: 10px;
-    list-style: none;
-    margin: 15px;
-    text-align: center;
-    box-shadow: 0 0 10px;
-}
-
-main li img {
+/* Welcome Image (Home page) */
+.Welcome img {
   display: block;
-  margin: 10px auto;
   max-width: 100%;
-  border-radius: 6px;
-  height: auto;
+  max-height: 450px;
+  margin: 0 auto;
 }
 
-main li:hover{
-    background-color: rgb(144, 67, 186);
+/* User Menu */
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+.user-menu div {
+  margin-right: 5px;
 }
 
-main a:hover{
-    text-decoration: none;
-    background-color: rgb(144, 67, 186);
-    color: white;
+/* Cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--muted);
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 10px;
+  align-content: flex-end;
 }
 
-main a{
-    text-decoration: none;
-    color: rgb(194, 154, 214);
+.card-footer,
+.card-title {
+  padding: 10px;
+  background-color: var(--accent);
+  color: var(--text);
+  text-align: center;
+  flex-shrink: 0;
+  width: 100%;
 }
 
-/*Phone*/
-@media screen and (max-width: 600px) {
-    main ol{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    main li{
-        width: 80%
-    }
-    
+.card-img {
+  flex: 0 0 150px;
+  position: relative;
+  background-color: var(--muted);
+  border-radius: 8px;
 }
 
-/*Typography*/
-header h1, header h2, main h2, footer, li{
+.card-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Recipes */
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.recipe-list .card {
+  flex: 0 0 24%;
+  margin: 0 1% 10px 0;
+}
+
+.recipe-list,
+.card,
+.recipe-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: var(--muted);
+  color: var(--text);
+  border-top: 1px solid var(--accent);
+  border-radius: 0 0 16px 16px;
+  box-sizing: border-box;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.gallery-grid .card {
+  flex: 0 0 24%;
+  margin: 0 1% 10px 0;
+}
+
+/* Music*/
+.music-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.music-cards .card {
+  flex: 0 0 24%;
+  margin: 0 1% 20px 0;
+}
+
+/* Shop */
+.shop-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.shop-grid .card {
+  flex: 0 0 24%;
+  margin: 0 1% 20px 0;
+}
+
+
+.carousel-nav {
+  text-align: center;
+}
+
+/* Media */
+@media (max-width: 600px) {
+  .Welcome {
     text-align: center;
+  }
+  .nav-bar {
+    flex-direction: column;
+  }
+  .nav-bar nav li {
+    display: block;
+    text-align: center;
+  }
+
+  .recipe-list .card,
+  .gallery-grid .card,
+  .music-cards .card,
+  .shop-grid .card {
+    flex: 0 0 48%;
+    margin: 0 2% 10px 0;
+  }
 }

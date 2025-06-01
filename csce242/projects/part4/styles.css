@@ -118,6 +118,7 @@ nav a {
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    align-content: flex-end;
 }
 
 /* Card Footer & Title */
@@ -212,7 +213,6 @@ nav a {
     margin-top: 10px;
 }
 .shop-grid .card {
-    float: left;
     width: 32%;
     margin: 0 1% 20px 0;
 }
@@ -243,6 +243,12 @@ nav a {
     .gallery-grid .card,
     .music-cards .card,
     .shop-grid .card {
+        width: 48%;
+        margin: 0 2% 10px 0;
+    }
+
+    .recipe-list .card {
+        flex-direction: column;
         width: 48%;
         margin: 0 2% 10px 0;
     }
