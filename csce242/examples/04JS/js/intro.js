@@ -36,25 +36,14 @@ document.getElementById("txt-name").onkeyup = (event) => {
     document.getElementById("welcomep").innerHTML = `Welcome ${userName}!`;
 }
 
-
+/* Change happy and sad pictures */
 document.getElementById("btn-happy").onclick = () => {
     const moodImage = document.getElementById("image-mood");
-    moodImage.src = "images/happyface.jpg";
+    moodImage.src="images/happy.jpg";
     moodImage.classList.remove("hidden");
 };
 
-document.getElementById("btn-sad").onclick = () => {
-    const moodImage = document.getElementById("image-mood");
-    moodImage.src = "images/sadface.jpg";
-    moodImage.classList.remove("hidden");
-};
-
-document.getElementById("btn-sad").onclick = () => {
+document.getElementById("btn-style").onclick = () => {
     const moodImage = document.getElementById("image-mood");
     moodImage.classList.add("image-bold");
-    
-};
-
-document.getElementById("toggle-nav").onclick = () => {
-    document.getElementById("writep").innerHTML = "Toggle";
 };
