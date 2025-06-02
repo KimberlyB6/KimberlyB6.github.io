@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Squish & Sweets Central - Dessert Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header-bar">
+        <div class="container nav-bar">
+            <div class="logo">Squish & Sweets Central</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="desserts.html" class="active">Desserts</a></li>
+                    <li><a href="SquishmallowGallery.html">Squishmallow Gallery</a></li>
+                    <li><a href="musicLounge.html">Music Lounge</a></li>
+                    <li><a href="shopTools.html">Shop Tools</a></li>
+                </ul>
+                <button class="menu-toggle" label="Toggle navigation">☰</button>
+            </nav>
+            <div class="user-menu">
+                <div>Kimberly Brown</div>
+                <img src="images/home/user.jpg" alt="User" width="24" height="24">
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section id="dessert-cards" class="recipe-section">
+            <h2>Desserts</h2>
+            <div id="recipe-container" class="recipe-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Kim</p>
+    </footer>
+    <script src="js/loadDessert.js"></script>
+    <script src="js/toggleMenu.js"></script>
+
+</body>
+
+</html>
