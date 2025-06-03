@@ -279,11 +279,11 @@ nav a {
   }
 }
 
-/* ====== MODAL STYLES (for “click-to-popup” recipe) ====== */
+/* ====== MODAL STYLES ====== */
 
 /* Backdrop for modal */
 #recipe-modal {
-  display: none;              /* hidden by default */
+  display: none;   
   position: fixed;
   top: 0;
   left: 0;
@@ -291,8 +291,6 @@ nav a {
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1000;
-
-  /* Flex centering for the modal-content box */
   align-items: center;
   justify-content: center;
 }
