@@ -8,14 +8,12 @@
 /* Home Page */
 .home-link {
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
 }
 
 .home-list {
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 0 10px 10px;
 }
 
 /* Body */
@@ -41,7 +39,12 @@ footer {
 }
 
 footer {
-    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
 
 /* Nav Bar */
@@ -72,11 +75,19 @@ nav a {
     text-decoration: none;
 }
 
+.Welcome p {
+    Left: 15px;
+    position: relative;
+}
+
 .Welcome img {
     display: block;
     max-width: 100%;
     max-height: 450px;
     margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* User Menu */
@@ -116,7 +127,7 @@ nav a {
 .card {
     background-color: var(--muted);
     border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     align-content: flex-end;
 }
@@ -233,6 +244,12 @@ nav a {
     nav li {
         display: block;
         text-align: center;
+    }
+
+    .home-link .card {
+        width: 48%;
+        margin: 0 2% 10px 0;
+        flex-direction: column;
     }
 
     .card-link {

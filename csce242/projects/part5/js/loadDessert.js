@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const jsonUrl = 'https://kimberlyb6.github.io/csce242/projects/part5/json/recipe.json';
   const container = document.getElementById('recipe-container');
 
-  // Grab references to the modal elements (assumes they exist in your HTML)
+  // Grab references to the modal elements
   const modal       = document.getElementById('recipe-modal');
   const modalBody   = document.getElementById('modal-body');
   const closeBtn    = modal.querySelector('.close-btn');
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalBody.innerHTML = ''; // clear previous content
   });
 
-  // Close the modal when clicking on the backdrop (outside .modal-content)
+  // Close the modal when clicking on the backdrop
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
       modal.style.display = 'none';
@@ -80,14 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
             html += '</ol>';
           }
 
-          // Inject into modal body and show the modal
+          // Put into modal body and show the modal
           modalBody.innerHTML = html;
           modal.style.display = 'flex';
         });
       });
     })
-    .catch(err => {
-      console.error(err);
-      container.innerHTML = `<p style="color:red;">Error loading recipes: ${err.message}</p>`;
+    .catch(error => {
+      console.error(error);
+      container.innerHTML = `<p style="color:red;">Error loading recipes: ${error.message}</p>`;
     });
 });
