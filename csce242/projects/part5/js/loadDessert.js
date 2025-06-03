@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const jsonUrl = 'https://<username>.github.io/<repo>/json/desserts.json';
+  const jsonUrl = 'https://kimberlyb6.github.io/csce242/projects/part5/json/recipe.json';
 
   const container = document.getElementById('recipe-container');
 
