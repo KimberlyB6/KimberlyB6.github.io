@@ -259,21 +259,21 @@ nav a {
   display: none;
   background: none;
   border: none;
-  font-size: 1.8rem;
+  font-size: 28px;
   cursor: pointer;
   color: var(--text);
 }
 
 @media (max-width: 600px) {
   nav ul {
-    display: none;          /* hide nav items */
-    flex-direction: column; /* stack items vertically */
+    display: none; 
+    flex-direction: column;
     margin-top: 10px;
   }
   .menu-toggle {
     display: block;
   }
-  /* When nav has class="nav-open", show the list */
+  
   nav.nav-open ul {
     display: flex;
   }
@@ -288,7 +288,7 @@ nav a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1000;
   align-items: center;
@@ -308,16 +308,16 @@ nav a {
   max-height: 90%;
   overflow-y: auto;
   border-radius: 8px;
-  padding: 1rem 1.5rem;
+  padding: 16px 24px;
   position: relative;
 }
 
 /* Close‐button “×” */
 #recipe-modal .close-btn {
   position: absolute;
-  top: 0.5rem;
-  right: 0.75rem;
-  font-size: 1.5rem;
+  top: 8px;
+  right: 12px; 
+  font-size: 24px; 
   font-weight: bold;
   color: #333;
   cursor: pointer;
@@ -326,13 +326,13 @@ nav a {
 /* Headings & lists inside modal */
 #recipe-modal h2 {
   margin-top: 0;
-  font-size: 1.75rem;
+  font-size: 28px;
 }
 #recipe-modal h3 {
-  margin-bottom: 0.25rem;
+  margin-bottom: 4px; 
 }
 #recipe-modal ul,
 #recipe-modal ol {
-  margin-left: 1.25rem;
-  margin-bottom: 1rem;
+  margin-left: 20px;
+  margin-bottom: 16px;
 }
