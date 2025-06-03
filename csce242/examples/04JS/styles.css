@@ -265,10 +265,9 @@ h1, h2 {
     width:90%;
     display: block;
     margin: auto;
-    border: 8px solid black;
-    height: fit-content;
+    border: 10px solid black;
+    height: 400px;
     border-radius: 5px;
-
 }
 
 
