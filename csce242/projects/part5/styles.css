@@ -278,3 +278,63 @@ nav a {
     display: flex;
   }
 }
+
+/* ====== MODAL STYLES (for “click-to-popup” recipe) ====== */
+
+/* Backdrop for modal */
+#recipe-modal {
+  display: none;              /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+
+  /* Flex centering for the modal-content box */
+  align-items: center;
+  justify-content: center;
+}
+
+/* When JS sets modal.style.display = 'flex' */
+#recipe-modal[style*="display: flex"] {
+  display: flex;
+}
+
+/* The white content box inside the modal */
+#recipe-modal .modal-content {
+  background: #fff;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+/* Close‐button “×” */
+#recipe-modal .close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Headings & lists inside modal */
+#recipe-modal h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+#recipe-modal h3 {
+  margin-bottom: 0.25rem;
+}
+#recipe-modal ul,
+#recipe-modal ol {
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
