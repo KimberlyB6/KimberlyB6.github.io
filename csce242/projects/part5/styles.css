@@ -5,15 +5,84 @@
     --accent: #AEEBF2;
 }
 
-/* Home Page */
-.home-link {
-    flex-wrap: wrap;
+/* Card Alignment */
+.home-list .card, 
+.gallery-grid .card,
+.shop-grid .card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--muted);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 24%;
+    margin: 0 1% 10px 0;
+    float: left;
+}
+.home-list a.home-link {
+    text-decoration: none;
+    color: inherit;
 }
 
-.home-list {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 0 10px 10px;
+.home-list .card-img, 
+.gallery-grid .card-img,
+.shop-grid .card-img {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; 
+    flex: 1 0 auto;
+}
+
+.home-list .card-img img,
+.gallery-grid .card-img img,
+.shop-grid .card-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.home-list .card-footer {
+    flex: 0 0 50px;
+    padding: 10px;
+    background-color: var(--accent);
+    color: var(--text);
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.gallery-grid .card-footer,
+.shop-grid .card-footer {
+    flex: 0 0 auto;
+    padding: 10px;
+    background-color: var(--accent);
+    color: var(--text);
+    text-align: center;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+/* Home Page */
+.Welcome p {
+    Left: 15px;
+    position: relative;
+}
+
+.Welcome img {
+    display: block;
+    max-width: 100%;
+    max-height: 450px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    right: 6px;
 }
 
 /* Body */
@@ -35,7 +104,6 @@ body {
 .header-bar,
 footer {
     background-color: var(--muted);
-    padding: 10px;
 }
 
 footer {
@@ -47,25 +115,35 @@ footer {
     align-items: center;
 }
 
-/* Nav Bar */
-.nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 /* Logo */
 .logo {
     font-size: 24px;
     font-weight: bold;
 }
 
+.logo img {
+    max-height: 100px;
+    width: auto;
+    display: block;
+    border-radius: 16px;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+div .logo {
+    position: relative;
+    right: 5%;
+}
+
 /* Navigation */
 nav ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    position: relative;
+    right: 20%
 }
+
 nav li {
     display: inline-block;
     margin-right: 15px;
@@ -75,19 +153,10 @@ nav a {
     text-decoration: none;
 }
 
-.Welcome p {
-    Left: 15px;
-    position: relative;
-}
-
-.Welcome img {
-    display: block;
-    max-width: 100%;
-    max-height: 450px;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* User Menu */
@@ -99,11 +168,8 @@ nav a {
     margin-right: 5px;
 }
 
-/* Placeholders */
-.placeholder-thumb,
-.card-img,
-.music-banner,
-.squish-circle {
+/* Card Images */
+.card-img  {
     background-color: var(--muted);
     width: 100%;
     padding-bottom: 100%;
@@ -132,7 +198,6 @@ nav a {
     align-content: flex-end;
 }
 
-/* Card Footer & Title */
 .card-footer,
 .card-title {
     padding: 10px;
@@ -141,13 +206,12 @@ nav a {
     text-align: center;
 }
 
-/* Link wrapper for recipe cards */
 .card-link {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
-}
+}  
 
 .card-link .card {
     float: left;
@@ -161,7 +225,6 @@ nav a {
     margin: 0 1% 10px 0;
 }
 
-/* Make card fill its wrapper */
 .card-link .card {
     width: 75%;
 }
@@ -204,15 +267,20 @@ nav a {
     margin: 0 1% 10px 0;
 }
 
+.gallery-grid .card-footer {
+    text-align: left;
+}
+
 /* Music Cards */
 .music-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .music-cards .card {
     width: 30%;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 /* Shop Grid */
@@ -228,47 +296,8 @@ nav a {
     margin: 0 1% 20px 0;
 }
 
-/* Carousel Nav */
-.carousel-nav {
-    text-align: center;
-}
-
-/* Media Queries */
-@media (max-width: 600px) {
-    .Welcome {
-        text-align: center;
-    }
-    .nav-bar {
-        flex-direction: column;
-    }
-    nav li {
-        display: block;
-        text-align: center;
-    }
-
-    .home-link .card {
-        width: 48%;
-        margin: 0 2% 10px 0;
-        flex-direction: column;
-    }
-
-    .card-link {
-        width: 48%;
-        margin: 0 2% 10px 0;
-    }
-
-    .gallery-grid .card,
-    .music-cards .card,
-    .shop-grid .card {
-        width: 48%;
-        margin: 0 2% 10px 0;
-    }
-
-    .recipe-list .card {
-        flex-direction: column;
-        width: 48%;
-        margin: 0 2% 10px 0;
-    }
+.shop-grid .card-footer {
+    text-align: left;
 }
 
 /* ====== TOGGLE MENU STYLES ====== */
@@ -281,23 +310,7 @@ nav a {
   color: var(--text);
 }
 
-@media (max-width: 600px) {
-  nav ul {
-    display: none; 
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  .menu-toggle {
-    display: block;
-  }
-  
-  nav.nav-open ul {
-    display: flex;
-  }
-}
-
 /* ====== MODAL STYLES ====== */
-
 /* Backdrop for modal */
 #recipe-modal {
   display: none;   
@@ -352,4 +365,168 @@ nav a {
 #recipe-modal ol {
   margin-left: 20px;
   margin-bottom: 16px;
+}
+
+/** Media Queries **/
+@media (max-width: 600px) {
+/*Recipe List*/
+    .recipe-list .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;      
+        margin: 0 0 10px;
+    }
+
+    .recipe-list .card .card-img {
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%; 
+        flex: 1 0 auto;
+    }
+
+    .recipe-list .card .card-img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .recipe-list .card .card-footer {
+        padding: 10px;
+        text-align: center;
+        background-color: var(--accent);
+        color: var(--text);
+
+        flex: 0 0 60px; 
+        overflow: hidden; 
+    }
+
+/* Nav Bar */
+    nav ul {
+        display: none; 
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav.nav-open ul {
+        display: flex;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+    }
+
+    nav li {
+        display: block;
+        text-align: center;
+    }
+
+/* Home Page */
+    .Welcome {
+        text-align: center;
+    }
+
+    .logo {
+        position: relative;
+        left: 0
+    }
+
+    .home-link .card {
+        width: 48%;
+        margin: 0 2% 10px 0;
+        flex-direction: column;
+
+    }
+
+/*Cards*/
+    .card-link {
+        width: 48%;
+        margin: 0 2% 10px 0;
+    }
+
+    .gallery-grid .card,
+    .music-cards .card,
+    .shop-grid .card {
+        width: 48%;
+        margin: 0 2% 10px 0;
+    }
+
+    .recipe-list .card {
+        flex-direction: column;
+        width: 48%;
+        margin: 0 2% 10px 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+  .home-list .card {
+    width: 100%;       
+    margin: 0 0 10px 0;
+    float: none;     
+  }
+
+  .home-list .card-footer {
+    flex: 0 0 40px;   
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .home-list .card {
+    width: 48%;  
+    margin: 0 2% 10px 0;  
+    float: left;
+  }
+  .home-list .card:nth-child(2n) {
+    margin-right: 0;   
+  }
+
+  .home-list .card-footer {
+    flex: 0 0 45px; 
+    padding: 9px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-list .card {
+    width: 32%; 
+    margin: 0 2% 10px 0;
+    float: left;
+  }
+  .home-list .card:nth-child(3n) {
+    margin-right: 0; 
+  }
+
+  .home-list .card-footer {
+    flex: 0 0 48px; 
+    padding: 9px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .home-list .card {
+    width: 24%;           
+    margin: 0 1% 10px 0;
+    float: left;
+  }
+  .home-list .card:nth-child(4n) {
+    margin-right: 0; 
+  }
+
+  .home-list .card-footer {
+    flex: 0 0 50px; 
+    padding: 10px;
+    font-size: 1rem;
+  }
 }

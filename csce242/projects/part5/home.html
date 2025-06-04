@@ -9,6 +9,12 @@
 <body>
     <header class="header-bar">
         <div class="container nav-bar">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="images/Logo.png" alt="Squish & Sweets Central Logo">
+                </a>
+            </div>
+        
             <div class="logo">Squish & Sweets Central</div>
             <nav>
                 <ul>
@@ -28,7 +34,10 @@
     <main class="container">
         <section class="Welcome">
             <p>Check out our collection of desserts, the squishmallow gallery, and more!</p>
-            <img src="images/home/Cake Squish.png" width="1175" height="450">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/home/welcomee.png">
+                <img media="(min-width: 601px)" src="images/home/Cake Squish.png" width="1175" height="450">
+            </picture>
         </section>
         <section id="home" class="home-list">
             <a href="desserts.html#lemon-pound-cake" class="home-link">
