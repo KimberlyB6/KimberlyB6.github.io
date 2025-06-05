@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Squish & Sweets Central - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header-bar">
+        <div class="container nav-bar">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="images/Logo.png" alt="Squish & Sweets Central Logo">
+                </a>
+            </div>
+        
+            <div class="logo-title">Squish & Sweets Central</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="desserts.html">Desserts</a></li>
+                    <li><a href="squishmallowGallery.html">Squishmallows</a></li>
+                    <li><a href="musicLounge.html">Music</a></li>
+                    <li><a href="shopTools.html">Shop</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+            </nav>
+            <div class="user-menu">
+                <div>Kimberly Brown</div>
+                <img src="images/home/user.jpg" alt="User" width="24" height="24">
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="Welcome">
+            <p>Check out our collection of desserts, the squishmallow gallery, and more!</p>
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/home/welcomee.png">
+                <img media="(min-width: 601px)" src="images/home/Cake Squish.png" width="1175" height="450">
+            </picture>
+        </section>
+        <section id="home" class="home-list">
+            <a href="desserts.html#lemon-pound-cake" class="home-link">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="images/desserts/lemonpoundcake.webp">
+                    </div>
+                    <div class="card-footer">Lemon Pound Cake</div>
+                </div>
+            </a>
+
+            <a href="desserts.html#apple-pie" class="home-link">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="images/desserts/applepie.webp">
+                    </div>
+                    <div class="card-footer">Apple Pie</div>
+                </div>
+            </a>
+
+            <a href="desserts.html#velvet-cookies" class="home-link">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="images/desserts/redvelvet.jpg">
+                    </div>
+                    <div class="card-footer">Frosted Red Velvet Cookies</div>
+                </div>
+            </a>
+
+            <a href="desserts.html#strawberry-shortcake" class="home-link">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="images/desserts/strawberrycake.jpg">
+                    </div>
+                    <div class="card-footer">Strawberry Shortcake</div>
+                </div>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Kim</p>
+    </footer>
+    <script src="js/toggleMenu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,623 @@
+ :root {
+    --bg: #F2B6C6;
+    --text: #BF2A70;
+    --muted: #D8F0F2;
+    --accent: #AEEBF2;
+    --extra: #000;
+}
+
+/* Card Alignment */
+.home-list .card, 
+.gallery-grid .card,
+.shop-grid .card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--muted);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 24%;
+    margin: 0 1% 10px 0;
+    float: left;
+}
+.home-list a.home-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.home-list .card-img, 
+.gallery-grid .card-img,
+.shop-grid .card-img {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; 
+    flex: 1 0 auto;
+}
+
+.home-list .card-img img,
+.gallery-grid .card-img img,
+.shop-grid .card-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.home-list .card-footer {
+    flex: 0 0 50px;
+    padding: 10px;
+    background-color: var(--accent);
+    color: var(--text);
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.gallery-grid .card-footer,
+.shop-grid .card-footer {
+    flex: 0 0 auto;
+    padding: 10px;
+    background-color: var(--accent);
+    color: var(--text);
+    text-align: center;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+/* Home Page */
+.Welcome p {
+    Left: 15px;
+    position: relative;
+}
+
+.Welcome img {
+    display: block;
+    max-width: 100%;
+    max-height: 450px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    right: 6px;
+}
+
+/* Body */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Header & Footer */
+.header-bar,
+footer {
+    background-color: var(--muted);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+/* Logo */
+.logo,
+.logo-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-title {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.logo img {
+    max-height: 100px;
+    width: auto;
+    display: block;
+    border-radius: 16px;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+div .logo {
+    position: relative;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    position: relative;
+    justify-content: space-between;
+    padding: 0%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 5px;
+}
+nav a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* User Menu */
+.user-menu img {
+    position: relative;
+    display: contents;
+    align-content: flex-start;
+}
+.user-menu div {
+    position: relative;
+}
+
+/* Card Images */
+.card-img  {
+    background-color: var(--muted);
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.card-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Card Base */
+.card {
+    background-color: var(--muted);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    align-content: flex-end;
+}
+
+.card-footer,
+.card-title {
+    padding: 10px;
+    background-color: var(--accent);
+    color: var(--text);
+    text-align: center;
+}
+
+.card-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}  
+
+.card-link .card {
+    float: left;
+    width: 24%;
+    margin: 0 1% 10px 0;
+}
+
+.home-link .card {
+    float: left;
+    width: 24%;
+    margin: 0 1% 10px 0;
+}
+
+.card-link .card {
+    width: 75%;
+}
+
+
+/* Recipe List */
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.recipe-list .card {
+    float: left;
+    width: 24%;
+    margin: 0 1% 10px 0;
+}
+
+.recipe-content {
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: var(--muted);
+    color: var(--text);
+    border-top: 1px solid var(--accent);
+    border-radius: 0 0 16px 16px;
+    box-sizing: border-box;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.gallery-grid .card {
+    float: left;
+    width: 24%;
+    margin: 0 1% 10px 0;
+}
+
+.gallery-grid .card-footer {
+    text-align: left;
+}
+
+/* Music Cards */
+.music-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.music-cards .card {
+    width: 30%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* Shop Grid */
+.shop-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.shop-grid .card {
+    width: 32%;
+    margin: 0 1% 20px 0;
+}
+
+.shop-grid .card-footer {
+    text-align: left;
+}
+
+/* ====== TOGGLE MENU STYLES ====== */
+.menu-toggle {
+  display: flex;
+  background: var(--accent);
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.menu-toggle:hover {
+  background: var(--text);
+  color: var(--muted);
+}
+
+/* Mobile overrides */
+@media (max-width: 600px) {
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        order: 1;
+        display: block;
+        margin: 10px 0;
+    }
+
+  nav ul {
+    order: 2;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--muted);
+    border-top: 1px solid var(--);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 2%;
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.nav-open ul {
+    display: flex;
+    align-items: center;
+    animation: slideDown 0.5s ease-in;
+    justify-content: center;
+  }
+
+  nav li {
+    text-align: center;
+    margin: 8px 0;
+    width: 200px;
+  }
+
+  /* Optional: make links larger/tappable on mobile */
+  nav a {
+    display: block;
+    font-size: 15px;
+    padding: 6px 0;
+  }
+
+  /* Slide-down */
+  @keyframes slideDown {
+    0%   { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-bar {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+/* ====== MODAL STYLES ====== */
+/* Backdrop for modal */
+#recipe-modal {
+  display: none;   
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+   height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+/* When JS sets modal.style.display = 'flex' */
+#recipe-modal[style*="display: flex"] {
+  display: flex;
+}
+
+/* The white content box inside the modal */
+#recipe-modal .modal-content {
+  background: #fff;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  border-radius: 8px;
+  padding: 16px 24px;
+  position: relative;
+}
+
+/* Close‐button “×” */
+#recipe-modal .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px; 
+  font-size: 24px; 
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Headings & lists inside modal */
+#recipe-modal h2 {
+  margin-top: 0;
+  font-size: 28px;
+}
+#recipe-modal h3 {
+  margin-bottom: 4px; 
+}
+#recipe-modal ul,
+#recipe-modal ol {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+/** Media Queries **/
+@media (max-width: 600px) {
+/*Recipe List*/
+  .recipe-list .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;      
+    margin: 0 0 10px;
+  }
+
+  .recipe-list .card .card-img {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; 
+    flex: 1 0 auto;
+  }
+
+  .recipe-list .card .card-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .recipe-list .card .card-footer {
+    padding: 10px;
+    text-align: center;
+    background-color: var(--accent);
+    color: var(--text);
+    flex: 0 0 60px; 
+    overflow: hidden; 
+  }
+
+/* Nav Bar */
+  nav ul {
+    display: none; 
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+  
+  nav.nav-open ul {
+    display: flex;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  nav li {
+    display: block;
+    text-align: center;
+  }
+
+/* Home Page */
+  .Welcome {
+    text-align: center;
+  }
+
+  .Welcome p {
+    display: flex;
+    flex-direction: row;
+    left: -2px;
+    margin: 10px 10px 10px 10px;
+  }
+
+  .logo {
+    position: relative;
+    left: 0
+  }
+
+  .home-link .card {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 2% 10px 0;
+  }
+
+/*Cards*/
+  .card-link {
+    width: 48%;
+    margin: 0 2% 10px 0;
+  }
+
+  .gallery-grid .card,
+  .music-cards .card,
+  .shop-grid .card {
+    width: 100%;
+    margin: 10px 20px 20px 20px;
+  }
+
+  .recipe-list .card {
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 20px 20px 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .home-list .card {
+    width: 100%;       
+    margin: 0 0 10px 0;
+    float: none;     
+  }
+
+  .home-list .card-footer {
+    flex: 0 0 40px;   
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .home-list .card {
+    width: 48%;  
+    margin: 0 2% 10px 0;  
+    float: left;
+  }
+  .home-list .card:nth-child(2n) {
+    margin-right: 0;   
+  }
+
+  .home-list .card-footer {
+    flex: 0 0 45px; 
+    padding: 9px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-list .card {
+    width: 32%; 
+    margin: 0 2% 10px 0;
+    float: left;
+  }
+  .home-list .card:nth-child(3n) {
+    margin-right: 0; 
+  }
+
+  .home-list .card-footer {
+    flex: 0 0 48px; 
+    padding: 9px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .home-list .card {
+    width: 24%;           
+    margin: 0 1% 10px 0;
+    float: left;
+  }
+  .home-list .card:nth-child(4n) {
+    margin-right: 0; 
+  }
+
+  .home-list .card-footer {
+    flex: 0 0 50px; 
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
