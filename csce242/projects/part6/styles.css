@@ -78,12 +78,37 @@
     max-width: 100%;
     max-height: 450px;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-left: 5px;
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: relative;
     right: 6px;
+}
+
+.hero-slider {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 10px 10px 10px 10px;
+}
+
+.hero-slider .slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.hero-slider .slide.active {
+  opacity: 1;
 }
 
 /* Body */
@@ -162,6 +187,7 @@ nav li {
 nav a {
     color: var(--text);
     text-decoration: none;
+    padding: 5px;
 }
 
 .nav-bar {
@@ -171,12 +197,19 @@ nav a {
 }
 
 /* User Menu */
-.user-menu img {
+.user-menu {
     position: relative;
-    display: contents;
-    align-content: flex-start;
+    display: flex;
+    align-items: center;
+    align-content: right;
 }
-.user-menu div {
+
+.user-menu img {
+    max-height: 50px;
+    width: auto;
+    border-radius: 16px;
+    margin-left: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
@@ -376,7 +409,6 @@ nav a {
     width: 200px;
   }
 
-  /* Optional: make links larger/tappable on mobile */
   nav a {
     display: block;
     font-size: 15px;
@@ -619,5 +651,38 @@ nav a {
     flex: 0 0 50px; 
     padding: 10px;
     font-size: 1rem;
+  }
+}
+
+.hero-container {
+  max-width: 1177px;
+  max-height: 450px;
+  margin: 10px auto;    
+  position: relative;
+  right: 10px;
+}
+
+.hero-container .hero-slider .slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container .mobile-hero {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;            
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  object-fit: cover;              
+  margin: 0 auto;                  
+}
+
+@media (max-width: 600px) {
+  .hero-container .hero-slider {
+    display: none !important;
+  }
+
+  .hero-container .mobile-hero {
+    display: block !important;
   }
 }
