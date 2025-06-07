@@ -45,41 +45,70 @@
             </div>
         </section>
         <section id="home" class="home-list">
-            <a href="desserts.html#lemon-pound-cake" class="home-link">
-                <div class="card">
+            <div class="home-link">
+                <div class="card" data-recipe-id="4">
                     <div class="card-img">
                         <img src="images/desserts/lemonpoundcake.webp">
                     </div>
                     <div class="card-footer">Lemon Pound Cake</div>
                 </div>
-            </a>
+            </div>
 
-            <a href="desserts.html#apple-pie" class="home-link">
-                <div class="card">
+            <div class="home-link">
+                <div class="card" data-recipe-id="5">
                     <div class="card-img">
                         <img src="images/desserts/applepie.webp">
                     </div>
                     <div class="card-footer">Apple Pie</div>
                 </div>
-            </a>
+            </div>
 
-            <a href="desserts.html#velvet-cookies" class="home-link">
-                <div class="card">
+            <div class="home-link">
+                <div class="card" data-recipe-id="9">
                     <div class="card-img">
                         <img src="images/desserts/redvelvet.jpg">
                     </div>
                     <div class="card-footer">Frosted Red Velvet Cookies</div>
                 </div>
-            </a>
+            </div>
 
-            <a href="desserts.html#strawberry-shortcake" class="home-link">
-                <div class="card">
+            <div class="home-link">
+                <div class="card" data-recipe-id="2">
                     <div class="card-img">
                         <img src="images/desserts/strawberrycake.jpg">
                     </div>
                     <div class="card-footer">Strawberry Shortcake</div>
                 </div>
-            </a>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <div class="form-container">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <input type="hidden" name="access_key" value="351383b8-e2db-40b6-bf46-28b64be711b3">
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required
+                        placeholder="How can we help you?"></textarea>
+
+                    <button type="submit">Send Message</button>
+                    <div id="formMessage" class="message"></div>
+                </form>
+            </div>
+
+            <div class="iframe-container">
+                <h2>DIY Recipes! &hearts;</h2>
+                <iframe width="560" height="350" src="https://www.youtube.com/embed/S0gGIH6e2Yk?si=tv-DzM4eX8PWcrQi"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section>
     </main>
     <footer>
@@ -87,6 +116,21 @@
     </footer>
     <script src="js/toggleMenu.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/contact.js"></script>
+
+    <div id="recipe-modal" class="recipe-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeRecipeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt=""
+                style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
+            <p id="modal-description"></p>
+            <h3>Ingredients</h3>
+            <ul id="modal-ingredients"></ul>
+            <h3>Instructions</h3>
+            <ol id="modal-instructions"></ol>
+        </div>
+    </div>
 </body>
 
 </html>
