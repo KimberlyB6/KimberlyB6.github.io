@@ -269,7 +269,7 @@ nav li {
 }
 
 nav a {
-  color: var(--text);
+  color: var(--text); 
   text-decoration: none;
   padding: 5px;
 }
